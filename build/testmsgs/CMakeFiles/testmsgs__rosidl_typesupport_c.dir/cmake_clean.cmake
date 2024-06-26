@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/testmsgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/testmsgs/msg/test_msg__type_support.cpp.o"
+  "CMakeFiles/testmsgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/testmsgs/msg/test_msg__type_support.cpp.o.d"
+  "libtestmsgs__rosidl_typesupport_c.pdb"
+  "libtestmsgs__rosidl_typesupport_c.so"
+  "rosidl_typesupport_c/testmsgs/msg/test_msg__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/testmsgs__rosidl_typesupport_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

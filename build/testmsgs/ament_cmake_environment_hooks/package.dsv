@@ -1,0 +1,4 @@
+source;share/testmsgs/local_setup.bash
+source;share/testmsgs/local_setup.dsv
+source;share/testmsgs/local_setup.sh
+source;share/testmsgs/local_setup.zsh

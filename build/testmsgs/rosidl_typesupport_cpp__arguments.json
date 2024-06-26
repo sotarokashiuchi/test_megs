@@ -1,0 +1,17 @@
+{
+  "package_name": "testmsgs",
+  "output_dir": "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_typesupport_cpp/testmsgs",
+  "template_dir": "/opt/ros/iron/share/rosidl_typesupport_cpp/resource",
+  "idl_tuples": [
+    "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_adapter/testmsgs:msg/TestMsg.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/iron/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
+    "/opt/ros/iron/lib/python3.10/site-packages/rosidl_typesupport_cpp/__init__.py",
+    "/opt/ros/iron/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
+    "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_adapter/testmsgs/msg/TestMsg.idl"
+  ]
+}

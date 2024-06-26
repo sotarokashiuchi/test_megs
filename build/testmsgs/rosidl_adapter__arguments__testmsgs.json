@@ -1,0 +1,6 @@
+{
+  "package_name": "testmsgs",
+  "non_idl_tuples": [
+    "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs:msg/TestMsg.msg"
+  ]
+}

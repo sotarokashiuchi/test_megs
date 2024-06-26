@@ -1,0 +1,14 @@
+source;share/testmsgs/hook/cmake_prefix_path.ps1
+source;share/testmsgs/hook/cmake_prefix_path.dsv
+source;share/testmsgs/hook/cmake_prefix_path.sh
+source;share/testmsgs/hook/ld_library_path_lib.ps1
+source;share/testmsgs/hook/ld_library_path_lib.dsv
+source;share/testmsgs/hook/ld_library_path_lib.sh
+source;share/testmsgs/hook/pythonpath.ps1
+source;share/testmsgs/hook/pythonpath.dsv
+source;share/testmsgs/hook/pythonpath.sh
+source;share/testmsgs/local_setup.bash
+source;share/testmsgs/local_setup.dsv
+source;share/testmsgs/local_setup.ps1
+source;share/testmsgs/local_setup.sh
+source;share/testmsgs/local_setup.zsh

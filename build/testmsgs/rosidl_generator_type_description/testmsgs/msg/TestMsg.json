@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "testmsgs/msg/TestMsg",
+      "fields": [
+        {
+          "name": "x",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "testmsgs/msg/TestMsg",
+      "hash_string": "RIHS01_3e1a8387fab88fc33f987571b187ab9c95d2f83d914089d25847f4abe628e35b"
+    }
+  ]
+}

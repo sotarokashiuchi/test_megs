@@ -1,0 +1,19 @@
+{
+  "package_name": "testmsgs",
+  "output_dir": "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_typesupport_introspection_c/testmsgs",
+  "template_dir": "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource",
+  "idl_tuples": [
+    "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_adapter/testmsgs:msg/TestMsg.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/iron/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c",
+    "/opt/ros/iron/lib/python3.10/site-packages/rosidl_typesupport_introspection_c/__init__.py",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/idl__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/idl__type_support.c.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/msg__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
+    "/home/sotaro/Documents/rocket/earth/ros2_ws/src/testmsgs/build/testmsgs/rosidl_adapter/testmsgs/msg/TestMsg.idl"
+  ]
+}
