@@ -63,16 +63,22 @@ class TestMsg(metaclass=Metaclass_TestMsg):
 
     __slots__ = [
         '_x',
+        '_y',
+        '_z',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'x': 'int32',
+        'y': 'int32',
+        'z': 'int32',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
@@ -86,6 +92,8 @@ class TestMsg(metaclass=Metaclass_TestMsg):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.x = kwargs.get('x', int())
+        self.y = kwargs.get('y', int())
+        self.z = kwargs.get('z', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -119,6 +127,10 @@ class TestMsg(metaclass=Metaclass_TestMsg):
             return False
         if self.x != other.x:
             return False
+        if self.y != other.y:
+            return False
+        if self.z != other.z:
+            return False
         return True
 
     @classmethod
@@ -140,3 +152,33 @@ class TestMsg(metaclass=Metaclass_TestMsg):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'x' field must be an integer in [-2147483648, 2147483647]"
         self._x = value
+
+    @builtins.property
+    def y(self):
+        """Message field 'y'."""
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'y' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'y' field must be an integer in [-2147483648, 2147483647]"
+        self._y = value
+
+    @builtins.property
+    def z(self):
+        """Message field 'z'."""
+        return self._z
+
+    @z.setter
+    def z(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'z' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'z' field must be an integer in [-2147483648, 2147483647]"
+        self._z = value

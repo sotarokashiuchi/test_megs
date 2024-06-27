@@ -4,3 +4,5 @@ testmsgs.egg-info/PKG-INFO
 testmsgs.egg-info/SOURCES.txt
 testmsgs.egg-info/dependency_links.txt
 testmsgs.egg-info/top_level.txt
+testmsgs/msg/__init__.py
+testmsgs/msg/_test_msg.py

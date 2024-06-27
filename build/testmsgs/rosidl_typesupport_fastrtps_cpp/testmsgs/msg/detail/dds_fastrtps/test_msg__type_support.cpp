@@ -35,6 +35,10 @@ cdr_serialize(
 {
   // Member: x
   cdr << ros_message.x;
+  // Member: y
+  cdr << ros_message.y;
+  // Member: z
+  cdr << ros_message.z;
   return true;
 }
 
@@ -46,6 +50,12 @@ cdr_deserialize(
 {
   // Member: x
   cdr >> ros_message.x;
+
+  // Member: y
+  cdr >> ros_message.y;
+
+  // Member: z
+  cdr >> ros_message.z;
 
   return true;
 }
@@ -66,6 +76,18 @@ get_serialized_size(
   // Member: x
   {
     size_t item_size = sizeof(ros_message.x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: y
+  {
+    size_t item_size = sizeof(ros_message.y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: z
+  {
+    size_t item_size = sizeof(ros_message.z);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -102,6 +124,24 @@ max_serialized_size_TestMsg(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Member: y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -110,7 +150,7 @@ max_serialized_size_TestMsg(
     using DataType = testmsgs::msg::TestMsg;
     is_plain =
       (
-      offsetof(DataType, x) +
+      offsetof(DataType, z) +
       last_member_size
       ) == ret_val;
   }

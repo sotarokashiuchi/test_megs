@@ -18,6 +18,8 @@ testmsgs__msg__TestMsg__init(testmsgs__msg__TestMsg * msg)
     return false;
   }
   // x
+  // y
+  // z
   return true;
 }
 
@@ -28,6 +30,8 @@ testmsgs__msg__TestMsg__fini(testmsgs__msg__TestMsg * msg)
     return;
   }
   // x
+  // y
+  // z
 }
 
 bool
@@ -38,6 +42,14 @@ testmsgs__msg__TestMsg__are_equal(const testmsgs__msg__TestMsg * lhs, const test
   }
   // x
   if (lhs->x != rhs->x) {
+    return false;
+  }
+  // y
+  if (lhs->y != rhs->y) {
+    return false;
+  }
+  // z
+  if (lhs->z != rhs->z) {
     return false;
   }
   return true;
@@ -53,6 +65,10 @@ testmsgs__msg__TestMsg__copy(
   }
   // x
   output->x = input->x;
+  // y
+  output->y = input->y;
+  // z
+  output->z = input->z;
   return true;
 }
 

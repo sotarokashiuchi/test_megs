@@ -20,6 +20,8 @@ extern "C"
 typedef struct testmsgs__msg__TestMsg
 {
   int32_t x;
+  int32_t y;
+  int32_t z;
 } testmsgs__msg__TestMsg;
 
 // Struct for a sequence of testmsgs__msg__TestMsg.

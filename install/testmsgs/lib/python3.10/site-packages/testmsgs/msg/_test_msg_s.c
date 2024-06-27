@@ -59,6 +59,24 @@ bool testmsgs__msg__test_msg__convert_from_py(PyObject * _pymsg, void * _ros_mes
     ros_message->x = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "y");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->y = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "z");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->z = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -86,6 +104,28 @@ PyObject * testmsgs__msg__test_msg__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLong(ros_message->x);
     {
       int rc = PyObject_SetAttrString(_pymessage, "x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // y
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // z
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "z", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

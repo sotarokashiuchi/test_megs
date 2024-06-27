@@ -54,6 +54,16 @@ static bool _TestMsg__cdr_serialize(
     cdr << ros_message->x;
   }
 
+  // Field name: y
+  {
+    cdr << ros_message->y;
+  }
+
+  // Field name: z
+  {
+    cdr << ros_message->z;
+  }
+
   return true;
 }
 
@@ -69,6 +79,16 @@ static bool _TestMsg__cdr_deserialize(
   // Field name: x
   {
     cdr >> ros_message->x;
+  }
+
+  // Field name: y
+  {
+    cdr >> ros_message->y;
+  }
+
+  // Field name: z
+  {
+    cdr >> ros_message->z;
   }
 
   return true;
@@ -91,6 +111,18 @@ size_t get_serialized_size_testmsgs__msg__TestMsg(
   // field.name x
   {
     size_t item_size = sizeof(ros_message->x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name y
+  {
+    size_t item_size = sizeof(ros_message->y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name z
+  {
+    size_t item_size = sizeof(ros_message->z);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -131,6 +163,22 @@ size_t max_serialized_size_testmsgs__msg__TestMsg(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -140,7 +188,7 @@ size_t max_serialized_size_testmsgs__msg__TestMsg(
     using DataType = testmsgs__msg__TestMsg;
     is_plain =
       (
-      offsetof(DataType, x) +
+      offsetof(DataType, z) +
       last_member_size
       ) == ret_val;
   }

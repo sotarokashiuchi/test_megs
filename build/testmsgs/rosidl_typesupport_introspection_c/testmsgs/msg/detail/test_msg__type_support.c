@@ -31,7 +31,7 @@ void testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_fini_fu
   testmsgs__msg__TestMsg__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_message_member_array[3] = {
   {
     "x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -48,13 +48,47 @@ static rosidl_typesupport_introspection_c__MessageMember testmsgs__msg__TestMsg_
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "y",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(testmsgs__msg__TestMsg, y),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "z",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(testmsgs__msg__TestMsg, z),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_message_members = {
   "testmsgs__msg",  // message namespace
   "TestMsg",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(testmsgs__msg__TestMsg),
   testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_message_member_array,  // message members
   testmsgs__msg__TestMsg__rosidl_typesupport_introspection_c__TestMsg_init_function,  // function to initialize message memory (memory has to be allocated)

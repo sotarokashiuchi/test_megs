@@ -12,6 +12,26 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "y",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "z",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -20,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "testmsgs/msg/TestMsg",
-      "hash_string": "RIHS01_3e1a8387fab88fc33f987571b187ab9c95d2f83d914089d25847f4abe628e35b"
+      "hash_string": "RIHS01_63ae1c58fa576a46e025621686274099988e126595e5ad3985eaecc8e1118b2d"
     }
   ]
 }

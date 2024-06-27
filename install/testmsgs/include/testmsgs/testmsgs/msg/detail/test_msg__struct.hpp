@@ -39,6 +39,8 @@ struct TestMsg_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->x = 0l;
+      this->y = 0l;
+      this->z = 0l;
     }
   }
 
@@ -49,6 +51,8 @@ struct TestMsg_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->x = 0l;
+      this->y = 0l;
+      this->z = 0l;
     }
   }
 
@@ -56,12 +60,30 @@ struct TestMsg_
   using _x_type =
     int32_t;
   _x_type x;
+  using _y_type =
+    int32_t;
+  _y_type y;
+  using _z_type =
+    int32_t;
+  _z_type z;
 
   // setters for named parameter idiom
   Type & set__x(
     const int32_t & _arg)
   {
     this->x = _arg;
+    return *this;
+  }
+  Type & set__y(
+    const int32_t & _arg)
+  {
+    this->y = _arg;
+    return *this;
+  }
+  Type & set__z(
+    const int32_t & _arg)
+  {
+    this->z = _arg;
     return *this;
   }
 
@@ -108,6 +130,12 @@ struct TestMsg_
   bool operator==(const TestMsg_ & other) const
   {
     if (this->x != other.x) {
+      return false;
+    }
+    if (this->y != other.y) {
+      return false;
+    }
+    if (this->z != other.z) {
       return false;
     }
     return true;
